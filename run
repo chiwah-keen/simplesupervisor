@@ -1,0 +1,25 @@
+#!/bin/bash -
+set -o nounset  # Treat unset variables as an error
+
+shdir=$PWD
+
+cd ${shdir}
+
+
+nohup python ${shdir}/test.py 2>&1
+
+
+
+
+# batch run command.
+#for ((i=0;i<10;i++));do
+#{
+#    nohup sh ${shdir}/dx_run.sh "data_exchange_"${i} >> ${shdir}/../log/exchange_${i}.log 2>&1
+#}&
+#done
+#wait
+
+
+echo "run_batch exit!"
+
+
